@@ -1,21 +1,9 @@
 package com.bridge.generics;
 
 public class PrintArray {
-	public static void toPrint(Integer[] doubleArray) {
-		for (int element: doubleArray) {
-			System.out.printf("%s",element); 
-		}
-		System.out.println();
-	}
-	public static void toPrint(Double[] inputArray) {
-		for (double element: inputArray) {
-			System.out.printf("%s",element); 
-		}
-		System.out.println();
-	}
-	public static void toPrint(Character[] inputArray) {
-		for (char element: inputArray) {
-			System.out.printf("%s",element); 
+	public static <T> void toPrint(T[] inputArray) {
+		for (T element: inputArray) {
+			System.out.printf("%s ", element); 
 		}
 		System.out.println();
 	}
